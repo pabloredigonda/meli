@@ -1,0 +1,6 @@
+/.project
+/.settings/
+/dist/
+/coverage/
+/.vscode/
+/.nyc_output/

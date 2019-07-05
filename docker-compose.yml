@@ -1,0 +1,45 @@
+version: '3'
+services:
+  dev:
+    image: node:11
+    container_name: meli-node-container
+    links:
+      - mongodb:DB
+      - redis:REDIS
+    depends_on: 
+      - mongodb
+      - redis
+    volumes:
+      - melinodemodules:/usr/src/service/node_modules
+      - .:/usr/src/service
+    environment:
+      - NODE_ENV=development
+    working_dir: /usr/src/service
+    command: npm run start
+    ports:
+      - 4000:3000
+    networks:
+      - testingnetwork  
+
+  mongodb:
+    image: mongo:3.4
+    container_name: meli-mongo-container    
+    ports:
+     - "27018:27017"
+    volumes:
+     - melimongodata:/var/lib/mongodb
+    networks:
+      - testingnetwork 
+  redis:
+    image: redis:latest
+    container_name: meli-redis-container
+    networks:
+      - testingnetwork 
+volumes:
+  melinodemodules:
+    external: true
+  melimongodata:
+    external: true
+networks:
+  testingnetwork:
+    driver: "bridge"
