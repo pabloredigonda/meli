@@ -14,12 +14,13 @@ class DbService implements DbServiceInterface{
 	
 		let uri
 		if(user){
-			uri = 'mongodb://'+user+':'+pass+'@'+host+'/' + db
+			uri = 'mongodb://'+user+':'+pass+'@'+host+'/'+db+'?ssl=true&replicaSet=meli-mongo-shard-0&authSource=admin&retryWrites=true&w=majority'
+			
 		}else{
 			uri = 'mongodb://'+host+'/' + db
 		}
 		
-		console.log("uri: " + uri)
+		//console.log("uri: " + uri)
 		
 		mongoose.connect(uri, {	
 			useMongoClient: true
