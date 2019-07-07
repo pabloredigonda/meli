@@ -22,12 +22,26 @@ export class StatsController implements interfaces.Controller {
     @httpGet("/")
     private async index(@request() req: express.Request, @response() res: express.Response) {
 		try{
+		
+			console.log("get from cache")
+		
 			let data = await this.cache.getStats()
 
+			console.log("cache")
+			console.log(data)
+
 			if(!data){
+			
+				console.log("get from db")
+			
 				data = await this.repository.getStats()
+				
+				console.log("Set in  cache")	
+				
 				this.cache.setStats(data)
 			}
+
+			console.log("result")
 
 			res.json(data)
 		} catch (err) {
