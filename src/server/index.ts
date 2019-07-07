@@ -26,7 +26,7 @@ server.setConfig((app) => {
 })
 
 let app = server.build()
-console.log("Server running on port: " + 3000)
+console.log("Server running on port: " + process.env.PORT)
 app.listen(process.env.PORT)
 
 
