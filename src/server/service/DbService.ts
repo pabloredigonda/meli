@@ -12,7 +12,6 @@ class DbService implements DbServiceInterface{
 
 	public constructor(host: string, db: string){
 		mongoose.connect('mongodb://'+host+'/' + db, {	
-			useNewUrlParser: true,
 			useMongoClient: true
 		})
 

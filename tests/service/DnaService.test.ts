@@ -1,7 +1,6 @@
 'use strict'
-
 import * as dotenv from 'dotenv';
-dotenv.config({path: '../../src/server/.env'});
+dotenv.config({path: '/usr/src/service/dist/.env'});
 
 import { expect } from 'chai'
 import 'reflect-metadata'

@@ -1,7 +1,6 @@
 'use strict'
-
 import * as dotenv from 'dotenv';
-dotenv.config({path: '../../src/server/.env'});
+dotenv.config({path: '/usr/src/service/dist/.env'});
 
 import { expect, assert } from 'chai'
 import sinon from 'sinon'
@@ -10,10 +9,6 @@ import 'reflect-metadata'
 import { container } from "../../src/server/inversify.config"
 import { TYPES } from "../../src/server/types"
 import { RedisServiceInterface, CacheServiceInterface } from "../../src/server/interfaces"
-
-
-
-
 
 
 
