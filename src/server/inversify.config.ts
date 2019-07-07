@@ -23,7 +23,7 @@ container.bind<CacheServiceInterface>(TYPES.CacheServiceInterface).to(CacheServi
 container.bind<RepositoryInterface>(TYPES.RepositoryInterface).to(DnaRepository).inSingletonScope();
 
 container.bind<DbServiceInterface>(TYPES.DbServiceInterface).toDynamicValue((context: interfaces.Context) => { 
-	return new DbService(process.env.DB_HOST, process.env.DB_NAME) 
+	return new DbService(process.env.DB_HOST, process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS) 
 }).inSingletonScope();
 
 container.bind<RedisServiceInterface>(TYPES.RedisServiceInterface).toDynamicValue((context: interfaces.Context) => { 

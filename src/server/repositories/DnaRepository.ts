@@ -45,6 +45,15 @@ class DnaRepository {
 	}
 
 	private format (result){
+	
+		if (typeof result == 'object' && typeof result[0] == 'undefined') {
+	    	return {
+	            count_mutant_dna: 0,
+	            count_human_dna: 0,
+	            ratio: 0
+	        }
+    	}
+	
 		return {
 			count_mutant_dna: result[0].mutants,
 			count_human_dna: result[0].total - result[0].mutants,

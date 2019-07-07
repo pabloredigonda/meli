@@ -10,8 +10,18 @@ class DbService implements DbServiceInterface{
 
 	private readonly db
 
-	public constructor(host: string, db: string){
-		mongoose.connect('mongodb://'+host+'/' + db, {	
+	public constructor(host: string, db: string, user: string, pass: string){
+	
+		let uri
+		if(user){
+			uri = 'mongodb://'+user+':'+pass+'@'+host+'/' + db
+		}else{
+			uri = 'mongodb://'+host+'/' + db
+		}
+		
+		console.log("uri: " + uri)
+		
+		mongoose.connect(uri, {	
 			useMongoClient: true
 		})
 
