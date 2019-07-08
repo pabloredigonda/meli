@@ -6,8 +6,9 @@ Docker, Docker Compose, Make
 Ejecutar:
  1. make setup
  2. make install
- 3. make build
- 4. make up
+ 3. cp .src/server/.env.example .src/server/.env
+ 4. make build
+ 5. make up
 
 ## Ejecutar worker
 
@@ -21,7 +22,7 @@ Levantar worker:
 
 
 
-**Endpoitns**:
+**Endpoitns locales**:
 [GET] 
 http://localhost:4000/stats
 
@@ -32,5 +33,20 @@ http://localhost:4000/mutant
     {
 	"dna":["AAAA","ATCT","AHTC","ACGA"]
 	}
+	
+
+**Endpoitns Prod**:
+[GET] 
+ec2-54-237-142-141.compute-1.amazonaws.com/stats
+
+[POST]
+ec2-54-237-142-141.compute-1.amazonaws.com/mutant
+[BODY]
+
+    {
+	"dna":["AAAA","ATCT","AHTC","ACGA"]
+	}	
+	
+	
 En la root del proyecto se encuentra disponible una collection de POSTMAN
  

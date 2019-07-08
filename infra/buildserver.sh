@@ -10,3 +10,5 @@ cp src/server/.env.example src/server/.env
 tsc && cp ./src/server/.env ./dist/.env
 
 npm install -g pm2
+sudo apt-get install libcap2-bin
+sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
