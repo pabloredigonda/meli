@@ -6,7 +6,7 @@ Docker, Docker Compose, Make
 Ejecutar:
  1. make setup
  2. make install
- 3. cp .src/server/.env.example .src/server/.env
+ 3. cp ./src/server/.env.example ./src/server/.env
  4. make build
  5. make up
 
@@ -29,6 +29,7 @@ http://localhost:4000/stats
 
 [POST]
 http://localhost:4000/mutant
+
 [BODY]
 
     {
@@ -51,4 +52,5 @@ ec2-54-237-142-141.compute-1.amazonaws.com/mutant
 
 	
 Postman collection
+
 https://www.getpostman.com/collections/b1e5c22960ad1fcd42e3
