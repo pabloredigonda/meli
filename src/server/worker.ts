@@ -13,10 +13,10 @@ console.log("WORKER start");
 worker.on( "message", function( msg, next, id ){
 	const message = JSON.parse(msg)
 
-	// console.log('new message received:')
+	console.log('new message received:')
 
 	repository.addDna(message.dna, message.isMutant, (doc)=>{
-		// console.log('new dna inserted:')
+		console.log('new dna inserted:')
 		// console.log(doc)
 	})
 	next()
