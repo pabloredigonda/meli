@@ -8,3 +8,5 @@ npm install -g typescript
 cp src/server/.env.example src/server/.env
 
 tsc && cp ./src/server/.env ./dist/.env
+
+npm install -g pm2

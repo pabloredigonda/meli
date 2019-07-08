@@ -11,9 +11,12 @@ class RedisService implements RedisServiceInterface{
 	private readonly client
 	
 	public constructor(host: string, port: number){
-		this.client = Redis.createClient({
-			host: host,
-			port: port
+		this.client = Redis.createClient(port, host, {
+			no_ready_check: true
+		})
+		
+		this.client.on("error", function (err) {
+			console.log("Redis connection error " + err);
 		});
 	}
 
