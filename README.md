@@ -23,6 +23,7 @@ Levantar worker:
 
 
 **Endpoitns locales**:
+
 [GET] 
 http://localhost:4000/stats
 
@@ -36,6 +37,7 @@ http://localhost:4000/mutant
 	
 
 **Endpoitns Prod**:
+
 [GET] 
 ec2-54-237-142-141.compute-1.amazonaws.com/stats
 
@@ -46,7 +48,7 @@ ec2-54-237-142-141.compute-1.amazonaws.com/mutant
     {
 	"dna":["AAAA","ATCT","AHTC","ACGA"]
 	}	
+
 	
-	
-En la root del proyecto se encuentra disponible una collection de POSTMAN
- 
+Postman collection
+https://www.getpostman.com/collections/b1e5c22960ad1fcd42e3
