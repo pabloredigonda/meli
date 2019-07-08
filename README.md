@@ -1,3 +1,6 @@
+## Stack
+NodeJS, Typescript, MongoDB, Redis, Docker
+
 ## Dependencias
 Docker, Docker Compose, Make
 
