@@ -33,6 +33,7 @@ Entrar en el contenedor de node
 Ejecutar tests:
 
 > npm run test
+
 > npm run testWithCoverage
 
 El code coverage se puede ver en la carpeta coverage/lcov-report/index.html
