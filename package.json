@@ -9,7 +9,7 @@
     "inversify": "^5.0.1",
     "inversify-express-utils": "^6.3.2",
     "mongoose": "^4.2.8",
-    "qs": "^6.0.0",
+    "qs": "^6.7.3",
     "redis": "^2.8.0",
     "reflect-metadata": "^0.1.13",
     "rsmq": "^0.11.0",
